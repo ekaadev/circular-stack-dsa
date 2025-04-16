@@ -1,8 +1,10 @@
+import random
+
 class CircularStack:
-    def __init__(self, ukuran: int, mulai: int)->None:
+    def __init__(self, ukuran: int)->None:
         self.ukuran = ukuran
         self.koleksi = [None] * ukuran
-        self.depan = mulai - 1
+        self.depan = random.randint(1, ukuran) - 1
         self.belakang = self.depan
         self.counter = 0
 
