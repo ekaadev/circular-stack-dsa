@@ -1,12 +1,19 @@
 from CircularStack import CircularStack
 
+"""
+@function info_cicular_stack, fungsi yang digunakan untuk memberikan info dari class circular stack
+"""
 def info_circular_stack(circular: CircularStack)->None:
     print(f'[INFO] Ukuran: {circular.ukuran}')
+    print(f'[INFO] Pilihan: {circular.pilihan}')
     print(f'[INFO] Index Depan: {circular.get_depan()}')
     print(f'[INFO] Index Belakang: {circular.get_belakang()}')
     print(f'[INFO] Counter: {circular.counter}')
     print(f'[INFO]: {circular.koleksi}')
 
+"""
+@function info_menu, fungsi yang digunakan untuk memberikan info dari sebuah menu
+"""
 def info_menu()->None:
     print(f'[INFO]: 1. Tambah data')
     print(f'[INFO]: 2. Kurang data')
@@ -14,10 +21,11 @@ def info_menu()->None:
     print(f'[INFO]: 4. Bersihkan data')
     print(f'[INFO]: 5. Exit')
 
+"""
+@function main, menjalakan program main
+"""
 def main():
     ukuran_koleksi = 0
-    # Disable input user for initialize front
-    # mulai = 0
     menu = 0
 
     while True:
@@ -27,19 +35,6 @@ def main():
                 break
         except ValueError:
             print(f'[ERROR]: Input salah')
-
-    # Disable input user for initialize front
-    # while True:
-    #     try:
-    #         while True:
-    #             mulai = int(input(f'[INPUT]: Masukan insialiasi mulai: '))
-    #             if mulai <= ukuran_koleksi:
-    #                 break
-    #
-    #         if mulai.is_integer() is True:
-    #             break
-    #     except ValueError:
-    #         print(f'[ERROR]: Input salah')
 
     cs: CircularStack = CircularStack(ukuran_koleksi)
 
